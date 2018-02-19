@@ -1,94 +1,97 @@
 <!DOCTYPE html>
 <html lang="es">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
-        <meta http-equiv="Pragma" content="no-cache">
-        <meta http-equiv="Expires" content="0">
-        <meta name="description" content="">
-        <meta name="author" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>SIADE • SaaS</title>
-        <link rel="shorcut icon" href="IMAGES/logo-siade.png">
-        <link rel="stylesheet" type="text/css" href="FONT-AWESOME/css/font-awesome.min.css">
-        <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800">
-        <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Montserrat:300">
-        <!--########################## - CSS - ##########################-->
-        <!--CSS de Bootstrap-->
-        <link rel="stylesheet" type="text/css" href="BOOTSTRAP/css/bootstrap.min.css">
-        <link rel="stylesheet" type="text/css" href="stylesApp.css">
-        <!--#############################################################-->
-    </head>
-    <body>
-        <header>
-            <nav class="navegador navegInic">
-                <ul class="container-fluid contenidoNav">
-                    <li class="navbar-header contenidoNav">
-                        <button id="botonRes" type="button" class="navbar-toggle" data-toggle="collapse" data-target="#colapsado"> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
-                        <a class="navbar-brand contenidoNav" href="#zona1"> <img id="logo-SIADE" src="IMAGES/logo-siade.png" alt="SIADE - SaaS"> </a>
-                    </li>
-                    <li id="colapsado" class="collapse navbar-collapse">
-                        <ul class="nav navbar-nav navbar-right pestanias">
-                            <li> <a href="cerrarSesion.php">
-                                Salir
-                            </a> </li>
-                        </ul>
-                    </li>
-                </ul>
-            </nav>
-        </header>
-        <section id="aplicacion" class="row content">
-            <nav id="elemIzq" class="plegado">
-                <ul>
-                    <li><a href="#"><span id="menu" class="sinclick glyphicon glyphicon-menu-hamburger"></span></a></li>
-                    <li>
-                        <ul id="opciones" class="opcionesOcultas">
-                            <li class="opcion"><button>Visor de mapas</button></li>
-                            <li class="opcion"><button>Gráficos</button></li>
-                            <li class="opcion"><button>Meteorología</button></li>
-                            <li></li>
-                        </ul>
-                    </li>
-                </ul>
-            </nav>
-            <section id="elementoVisor" class="fondoInvisible">
-                <article class="contenidoDef">
-                    <h3>Visor de mapas</h3>
-                    <p>Información para todas las paradas, tramos y líneas.</p>
-                    <button class="botonAbrir" onclick='window.open("visor.php", "Diseño Web", "fullscreen=yes")'>Abrir</button>
-                </article>
-            </section>
-            <section id="elementoD3" class="col-sm-9 oculto fondoInvisible">
-                <article class="contenidoDef">
-                    <h3>Gráficos</h3>
-                    <p>Representación con múltiples gráficos para todo tipo de información.</p>
-                    <p>EN DESARROLLO</p>
-                    <!--<button class="botonAbrir" onclick='window.open("visor.html", "Diseño Web", "fullscreen=yes")'>
-                    Abrir
-                    </button>-->
-                </article>
-            </section>
-            <section id="elementoMeteo" class="col-sm-9 oculto fondoInvisible">
-                <article class="contenidoDef">
-                    <h3>Meteorología</h3>
-                    <p>Seguimiento de las condiciones meteorológicas de la zona.</p>
-                    <p>EN DESARROLLO</p>
-                    <!--<button class="botonAbrir" onclick='window.open("visor.html", "Diseño Web", "fullscreen=yes")'>
-                    Abrir
-                    </button>-->
-                </article>
-            </section>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SIADE • SaaS</title>
+    <link rel="shorcut icon" href="IMAGES/logo-siade.png">
+    <link rel="stylesheet" type="text/css" href="FONT-AWESOME/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800">
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Montserrat:300">
+    <!--########################## - CSS - ##########################-->
+    <!--CSS de Bootstrap-->
+    <link rel="stylesheet" type="text/css" href="BOOTSTRAP/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="stylesApp.css">
+    <!--#############################################################-->
+</head>
+
+<body>
+    <section id="aplicacion" class="row content">
+        <nav id="elemIzq" class="plegado">
+            <ul id="listaDerecha">
+                <li><a href="#"><span id="menu" class="sinclick glyphicon glyphicon-chevron-right"></span></a></li>
+            </ul>
+            <ul id="listaIzquierda">
+                <li id="logo"> <img id="logo-SIADE" src="IMAGES/logo-siade.png" alt="SIADE - SaaS"> </li>
+                <li id="options">
+                    <ul id="opciones" class="opcionesOcultas">
+                        <li class="opcion"> <a href="#" id="mapas">Visor de mapas</a> </li>
+                        <li class="opcion"> <a href="#" id="graficos">Gráficos</a> </li>
+                        <li class="opcion"> <a href="#" id="meteo">Meteorología</a> </li>
+                    </ul>
+                </li>
+                <li id="exit"><a id="out" href="#">Cerrar sesión <span class="glyphicon glyphicon-log-out"></span></a></li>
+            </ul>
+        </nav>
+        <section id="elementoVisor">
+            <iframe id="visor" src="http://192.168.0.50/wa/apps/webappviewer/index.html?id=dc0b0cf5a8f144f3ad0625489322990d"></iframe>
         </section>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-        <script>
-            $(document).ready(function() {
-                $("#menu").click(function(){
-                    $("#elemIzq").toggleClass("desplegado");
-                    $("#menu").toggleClass("clickado");
-                    $('#opciones').toggleClass("opcionesVisibles");
+        <section id="elementoD3" class="oculto fondoInvisible">
+            <article class="contenidoDef">
+                <h3>Gráficos</h3>
+                <p>Representación con múltiples gráficos para todo tipo de información.</p>
+                <p>EN DESARROLLO</p>
+                <!--<button class="botonAbrir" onclick='window.open("visor.html", "Diseño Web", "fullscreen=yes")'>
+                    Abrir
+                    </button>-->
+            </article>
+        </section>
+        <section id="elementoMeteo" class="oculto fondoInvisible">
+            <article class="contenidoDef">
+                <h3>Meteorología</h3>
+                <p>Seguimiento de las condiciones meteorológicas de la zona.</p>
+                <p>EN DESARROLLO</p>
+                <!--<button class="botonAbrir" onclick='window.open("visor.html", "Diseño Web", "fullscreen=yes")'>
+                    Abrir
+                    </button>-->
+            </article>
+        </section>
+    </section>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#menu").click(function () {
+                $("#elemIzq").toggleClass("desplegado");
+                $("#menu").toggleClass("clickado");
+                $('#opciones').toggleClass("opcionesVisibles");
+                $('#elemIzq').hover(function () {}, function () {
+                    $("#elemIzq").removeClass("desplegado");
                 });
             });
-        </script>
-    </body>
+            $("#mapas").click(function () {
+                $("#elementoD3").addClass("oculto");
+                $("#elementoMeteo").addClass("oculto");
+                $("#elementoVisor").removeClass("oculto");
+            });
+            $("#graficos").click(function () {
+                $("#elementoVisor").addClass("oculto");
+                $("#elementoMeteo").addClass("oculto");
+                $("#elementoD3").removeClass("oculto");
+            });
+            $("#meteo").click(function () {
+                $("#elementoVisor").addClass("oculto");
+                $("#elementoD3").addClass("oculto");
+                $("#elementoMeteo").removeClass("oculto");
+            });
+        });
+    </script>
+</body>
+
 </html>
